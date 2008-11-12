@@ -8,10 +8,10 @@ end
 
 describe RailersController do
 
-  it "should paginates latests railers" do
+  it "should paginates latests railers by id" do
     result = 567
     page = "5"
-    Railer.should_receive(:paginate).with(:page => page, :order => "created_at DESC").and_return(result)
+    Railer.should_receive(:paginate).with(:page => page, :order => "id DESC").and_return(result)
     get :index, { :page => page, }
     assigns[:railers].should eql(result)
   end
