@@ -9,5 +9,6 @@ class Railer < ActiveRecord::Base
 end
 
 ActionController::Routing::Routes.draw do |map|
-  map.resources :railers
+  map.connect ':controller/:action'
+  #map.resources :railers
 end
