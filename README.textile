@@ -1,3 +1,34 @@
+h2. What is it?
+
+Many times we need to paginate some model ordering it from newest to oldest. An example of this is when we paginate the latests posts, the latests comments, latests tickets and so on.
+will_paginate_latests is a plugin for Rails that uses the famous gem will_paginate underneat and lets you write in the controller:
+
+<code>paginate_latests(:twitts)</code>
+
+instead of:
+
+<code>Twitt.will_paginate(:page => params[:page], :order => 'id DESC')</code>
+
+less code and more readable. If you're asking about the page parameter, it is taken automatically by the plugin, you don't have to care!
+
+h2. Installation
+
+<code>script/plugin install git://github.com/dcrec1/will_paginate_latests.git</code>
+
+h2. Usage
+
+In the controller:
+
+<code>paginate_latests(:tickets)</code>
+
+If you want more than 10 records per page, 20 for example, you can do:
+
+<code>paginate_latests(:blog_posts, :per_page => 20)</code>
+
+In the first example the model is Ticket and in the second the model is BlogPost.
+
+h2. License
+
 Copyright (c) 2008 [name of plugin creator]
 
 Permission is hereby granted, free of charge, to any person obtaining
