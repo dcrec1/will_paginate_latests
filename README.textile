@@ -13,6 +13,8 @@ less code and more readable. If you're asking about the page parameter, it is ta
 
 h2. Installation
 
+In the root folder your Rails project:
+
 <code>script/plugin install git://github.com/dcrec1/will_paginate_latests.git</code>
 
 h2. Usage
