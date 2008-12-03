@@ -6,3 +6,9 @@ ActionController::Base.class_eval do
     Kernel.const_get(model).paginate(map)
   end
 end
+
+ActionView::Base.class_eval do
+  def paginate(collection)
+    will_paginate(collection, :previous_label => I18n.t(:previous), :next_label => I18n.t(:next))
+  end
+end
